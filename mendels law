@@ -1,0 +1,9 @@
+def mendels_law(hom, het, rec):
+	    tot = hom + het + rec 
+	    
+	    rec_prob = (rec/tot) * ((rec - 1) / (tot - 1))
+	    hetd_prob = (het/tot) * ((het - 1) / (tot - 1))
+	    hetr_prob = (het / tot) * (rec / (tot - 1)) + ( rec / tot ) * (het / (tot - 1))
+	    
+	    rec_tot = rec_prob + hetd_prob * (.25) + hetr_prob * (.5)
+	    return (1 - rec_tot)
